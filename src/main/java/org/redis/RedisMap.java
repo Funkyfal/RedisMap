@@ -54,7 +54,7 @@ public class RedisMap implements Map<String, String> {
             Set<String> keys = jedis.keys("*");
             for (String key : keys) {
                 String v = jedis.get(key);
-                if (v.equals(value)) {
+                if (value.equals(v)) {
                     return true;
                 }
             }
